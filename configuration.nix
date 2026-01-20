@@ -7,10 +7,6 @@
     viAlias = true;
     vimAlias = true;
 
-    spellcheck = {
-      enable = true;
-    };
-
     lsp = {
       enable = true;
 
