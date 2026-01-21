@@ -7,6 +7,9 @@
     viAlias = true;
     vimAlias = true;
 
+    tabstop = 2;
+    shiftwidth = 2;
+
     lsp = {
       enable = true;
 
