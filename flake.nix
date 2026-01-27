@@ -4,7 +4,11 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
     systems = ["aarch64-darwin" "x86_64-linux"];
     forEachSystem = f: nixpkgs.lib.genAttrs systems (system: f system);
   in {
@@ -23,6 +27,7 @@
         buildInputs = with nixpkgs.legacyPackages.${system}; [
           nix
           gh
+          self.packages.${system}.default
         ];
       };
     });
