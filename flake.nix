@@ -4,7 +4,11 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
     systems = ["aarch64-darwin" "x86_64-linux"];
     forEachSystem = f: nixpkgs.lib.genAttrs systems (system: f system);
   in {
@@ -23,7 +27,7 @@
     in {
       default = pkgs.mkShell {
         packages = with pkgs; [
-          neovim
+          self.packages.${system}.default
           alejandra
         ];
       };
