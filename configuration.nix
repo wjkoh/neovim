@@ -7,6 +7,10 @@
     viAlias = true;
     vimAlias = true;
 
+    globals = {
+      clipboard = "osc52";
+    };
+
     clipboard = {
       enable = true;
       registers = "unnamedplus";
