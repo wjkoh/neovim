@@ -1,7 +1,6 @@
-{
-  pkgs,
-  lib,
-  ...
+{ pkgs
+, lib
+, ...
 }: {
   vim = {
     viAlias = true;
@@ -137,7 +136,7 @@
         enable = true;
         setupOpts.custom_colorcolumn = {
           nix = "110";
-          go = ["90" "130"];
+          go = [ "90" "130" ];
         };
       };
       fastaction.enable = true;
