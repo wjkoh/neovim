@@ -7,7 +7,10 @@
     viAlias = true;
     vimAlias = true;
 
-    clipboard.registers = "unnamedplus";
+    clipboard = {
+      enable = true;
+      registers = "unnamedplus";
+    };
 
     options = {
       tabstop = 2;
