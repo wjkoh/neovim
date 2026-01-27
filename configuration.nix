@@ -7,6 +7,8 @@
     viAlias = true;
     vimAlias = true;
 
+    clipboard.registers = "unnamedplus";
+
     options = {
       tabstop = 2;
       shiftwidth = 2;
