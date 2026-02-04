@@ -16,8 +16,6 @@
       registers = "unnamedplus";
     };
 
-    globals = {clipboard = "osc52";};
-
     options = {
       tabstop = 2;
       shiftwidth = 2;
