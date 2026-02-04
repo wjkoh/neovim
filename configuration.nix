@@ -12,6 +12,8 @@
       registers = "unnamedplus";
     };
 
+    globals = {clipboard = "osc52";};
+
     options = {
       tabstop = 2;
       shiftwidth = 2;
@@ -44,7 +46,10 @@
       go.enable = true;
       html.enable = true;
       json.enable = true;
-      markdown.enable = true;
+      markdown = {
+        enable = true;
+        lsp.servers = ["markdown-oxide"];
+      };
       nix.enable = true;
       sql.enable = true;
       toml.enable = true;
